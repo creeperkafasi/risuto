@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-gray-900 text-gray-50 font-light text-lg grid justify-center">
+  <div class="bg-gray-900 text-gray-50 font-light text-lg flex flex-row justify-center">
     <NavBar />
     <ul class="main-content p-16 grid w-full" style="max-width: 1500px;">
       <li v-for="(listName, index) in lists" :key="index">
