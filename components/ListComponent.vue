@@ -15,7 +15,7 @@
           <div class="w-1/6 text-2xl text-center mb-2 mt-2 relative">
             <div v-if="item.image">
               <img :src="item.image">
-              <span v-if="item.emoji" class="absolute -bottom-1.5 -right-1.5">{{
+              <span v-if="item.emoji" class="absolute -bottom-1.5 -right-1.5 text-3xl">{{
                 item.emoji
               }}</span>
             </div>
@@ -23,7 +23,10 @@
               item.emoji
             }}</span>
             <span v-else class="text-3xl">●</span>
-            <div v-if="item.rating" class="on-im-hover bg-gray-50 bg-opacity-50 w-24 p-2 rounded-md">
+            <div
+              v-if="item.rating"
+              class="on-im-hover bg-gray-50 bg-opacity-50 w-24 p-2 rounded-md"
+            >
               {{ item.rating }} / 10
             </div>
           </div>
@@ -69,18 +72,22 @@ export default Vue.extend({
 }
 .list-item {
   min-height: 3rem;
+  transition: scale 0.2s ease-in-out;
+}
+
+.list-item:hover{
+  scale: 1.02;
 }
 
 .list-item .on-im-hover {
-  height: 0px;
-  opacity: 0%;
+  opacity: 0;
+  height: 3rem;
   transition: opacity 0.2s ease-in-out;
   position: absolute;
   left: 70%;
   top: 80%;
 }
 .list-item div:hover > .on-im-hover {
-  height: 3rem;
-  opacity: 100%;
+  opacity: 1;
 }
 </style>
