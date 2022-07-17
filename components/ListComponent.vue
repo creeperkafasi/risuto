@@ -38,7 +38,12 @@ import Vue from "vue";
 import ListItem from "~/interfaces/ListItem";
 
 export default Vue.extend({
-  props: ["content"],
+  props: {
+    content: {
+      type: String,
+      required: true,
+    },
+  },
   data: () => ({
     listTitle: "",
     listItems: [] as ListItem[],

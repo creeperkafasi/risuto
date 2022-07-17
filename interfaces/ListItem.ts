@@ -4,4 +4,4 @@ export default interface ListItem {
   image?: string;
   rating?: string;
   emoji?: string;
-}
+};
