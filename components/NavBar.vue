@@ -7,7 +7,7 @@
       p-3
       font-light
       max-h-16
-      w-full
+      w-screen
       fixed
       flex
       z-50

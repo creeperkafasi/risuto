@@ -1,6 +1,6 @@
 <template>
   <div
-    class="list-container bg-gray-400 text-black p-2 m-16 w-4/5 max-w-lg rounded-lg shadow-2xl"
+    class="list-container bg-gray-400 text-black p-2 my-4 w-4/5 min-w-0 max-w-lg rounded-lg shadow-2xl"
   >
     <h1 class="font-normal text-xl mx-2 my-1">
       {{ listTitle }}
