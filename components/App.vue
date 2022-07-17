@@ -30,7 +30,7 @@ export default Vue.extend({
 <style>
 .main-content {
   min-height: 100vh;
-  grid-template-columns: repeat(auto-fill, minmax(min(550px, 90%), 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(550px, 90%), 1fr));
 }
 
 .main-content li {

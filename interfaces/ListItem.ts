@@ -2,6 +2,6 @@ export default interface ListItem {
   title: string;
   text: string;
   image?: string;
-  rating?: string;
+  rating?: number | "💩" | "🤩";
   emoji?: string;
 };

@@ -5,6 +5,7 @@ items:
     text: testtest  
     image: https://avatars.githubusercontent.com/u/49831545?v=4
     emoji: ☝🏿
+    rating: 10
   - title: 2
     text: testtest
     emoji: 🥰

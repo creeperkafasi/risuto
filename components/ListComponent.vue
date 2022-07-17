@@ -12,17 +12,21 @@
         class="list-item border border-solid border-gray-600 w-11/12 mx-1 mb-2.5 rounded-md bg-gray-500 bg-opacity-50 px-3 pt-2 shadow-md"
       >
         <div class="flex">
-          <div v-if="item.image" class="w-1/6 text-2xl mb-2 relative">
-            <img :src="item.image">
-            <span v-if="item.emoji" class="absolute -bottom-1.5 -right-1.5">{{
+          <div class="w-1/6 text-2xl text-center mb-2 mt-2 relative">
+            <div v-if="item.image">
+              <img :src="item.image">
+              <span v-if="item.emoji" class="absolute -bottom-1.5 -right-1.5">{{
+                item.emoji
+              }}</span>
+            </div>
+            <span v-else-if="item.emoji" class="text-3xl">{{
               item.emoji
             }}</span>
+            <span v-else class="text-3xl">●</span>
+            <div v-if="item.rating" class="on-im-hover bg-gray-50 bg-opacity-50 w-24 p-2 rounded-md">
+              {{ item.rating }} / 10
+            </div>
           </div>
-          <span
-            v-else-if="item.emoji"
-            class="w-1/6 text-3xl text-center mb-2"
-          >{{ item.emoji }}</span>
-          <span v-else class="w-1/6 text-3xl text-center mb-2">●</span>
           <span class="w-4/6 ml-3">
             <h1 class="underline font-normal text-black">{{ item.title }}</h1>
             {{ item.text }}
@@ -65,5 +69,18 @@ export default Vue.extend({
 }
 .list-item {
   min-height: 3rem;
+}
+
+.list-item .on-im-hover {
+  height: 0px;
+  opacity: 0%;
+  transition: opacity 0.2s ease-in-out;
+  position: absolute;
+  left: 70%;
+  top: 80%;
+}
+.list-item div:hover > .on-im-hover {
+  height: 3rem;
+  opacity: 100%;
 }
 </style>
