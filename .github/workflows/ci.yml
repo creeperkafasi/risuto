@@ -42,4 +42,7 @@ jobs:
 
       - name: Run linter 👀
         run: npm run lint
+        
+      - name: Test Build 🧱
+        run: npm run build
 
